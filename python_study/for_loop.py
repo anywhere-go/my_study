@@ -68,7 +68,7 @@ for 변수 in iterable값:
 
 # #다른 코드
 # for i in range (2, 31):
-#     if i %2 ==0: #작수
+#     if i %2 ==0: #짝수
 #         print(i)
 
 # if 1 == 1:
@@ -158,6 +158,3 @@ for 변수 in iterable값:
 #첫 프로그래밍 축하합니다!
 
 #
-count = range(20)
-for x in count:
-    if (())
