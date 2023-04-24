@@ -393,10 +393,10 @@ def 함수이름(함수입력값):
 
 # 다이아몬드 (정방향 + 역방향)
 
-for i in range(6): # 정방향
-    print(' ' * (5 - i) + '*' * (i * 2 + 1))
-for i in range(6): # 역방향
-    print(' ' * i + '*' * (11 - (2 * i)))
+# for i in range(6): # 정방향
+#     print(' ' * (5 - i) + '*' * (i * 2 + 1))
+# for i in range(6): # 역방향
+#     print(' ' * i + '*' * (11 - (2 * i)))
 
 # 출력 결과
 #      *
@@ -433,12 +433,13 @@ for i in range(6): # 역방향
 # print_stars(4)
 
 # #
-# def print_stars(n):
-#     for i in range(0, n+1): #0~n-1
-#         print(i * "*")
+def print_stars(n):
+    for i in range(0, n+1): #0~n-1
+        print(i * "*")
+print_stars(4)
 
 
-    # for in in range(n):
+    # for i in range(n):
     #     print("*" *(i +1))
 
 
