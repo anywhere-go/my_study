@@ -56,7 +56,7 @@
 # 함수 정의(define)
 # 함수 이름 (변수 이름처럼 규칙을 지켜서 만듬- 영어, 숫자, _ 등으로 사용)
 # 숫자로 시작하면 안됨, 띄어쓰기하면 안됨, 키워드 사용하면 안됨
-# 기존에 이미 정의된 함수 이름도 피하는 것이 좋다
+# 기존에 이미 정의된 함수 이름도 피하는 것이 좋다. 왜냐하면 덮어쓰기 하기 때문에 문제 발생
 # 함수 입력값 parameter(매개변수, argument혼용)
 # 함수 결과값 return value
 """
@@ -81,7 +81,7 @@ def 함수이름(함수입력값):
 #     print(get_name())
 
 # print_my_name()
-# a = print_my_name() #리턴값이 없음
+# a = print_my_name() #리턴값이 없음, None(없다의 의미)
 # b = get_name() #리턴값이 있음 그래서 리턴값을 변수에 넣을 수 있다
 # print(a)  #a = None이 들어감
 # print(b)
@@ -102,7 +102,7 @@ def 함수이름(함수입력값):
 # print(result)
 
 
-# print_add("안녕", "하세요")  #안녕하세요 출력되지만  "안녕", 1은 에러가 나옴(문자 +숫자 불가능)
+# print_add("안녕", "하세요")  #안녕하세요 출력되지만  ("안녕", 1)은 에러가 나옴(문자 +숫자 불가능)
 # print_add("하세요", "안녕")  #하세요안녕이 출력되므로 순서, 위치가 중요함
 
 # print_add(b = "하세요", a="안녕")
@@ -168,7 +168,7 @@ def 함수이름(함수입력값):
 # print(mul(1)) #1 출력
 
 
-# def test_func(x, test=[]):
+# def test_func(x, test=[]):#리스트 형식 사용하면 안됨
 #     test.append(x)
 #     print(x, test)
 
@@ -260,7 +260,7 @@ def 함수이름(함수입력값):
 
 #해결방법
 # def test_func6(a, b):
-#     return a + b, a * b
+#     return a + b, a * b  #이렇게 사용해야 된다. return 2개 안됨
 # result = test_func6(1, 2) #통으로 결과값 저장 -> (3, 2)
 # res_add, res_mul = test_func6(1,2) #까서 각각 저장 ->3 2
 
@@ -433,10 +433,10 @@ def 함수이름(함수입력값):
 # print_stars(4)
 
 # #
-def print_stars(n):
-    for i in range(0, n+1): #0~n-1
-        print(i * "*")
-print_stars(4)
+# def print_stars(n):
+#     for i in range(0, n+1): #0~n-1
+#         print(i * "*")
+# print_stars(4)
 
 
     # for i in range(n):
@@ -451,5 +451,40 @@ print_stars(4)
 #         j +=1
 #     print()
 #     i += 1
+# print_stars(4)
+
+
+#다음 함수를 정의하세요.
+#정수 n을 입력받고, n보다 작은 수 중 3의 배수와 5의 배수를 모두 더한 합을 반환하는 함수
+#함수 이름: sum_3_5
+
+# def sum_3_5(n):
+#     for i in range(0,i+1,3):
+#         if i % 3 == 0 and i <=n:
+#             print(i)
+#     for j in range
+
+    
+#     return sum_3_5(sum(i+j))
+
+# 강사 풀이
+def sum_3_5(n):
+    result = 0
+    for i in range(1,n):
+        if i % 3 == 0 or i % 5 == 0:
+            result += i
+    return result
+
+print("\n")
+print(sum_3_5(9))
+# 고쳐야 할 부분? 뒤에 if를 elif로 바꿔주면 된다
+# def sum_3_5(n):
+#     result = 0
+#     for i in range(n):
+#         if i % 3 == 0:
+#             result += i
+#         if i % 5 == 0:
+#             result += i
+#     return result
 
 
